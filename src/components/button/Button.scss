@@ -1,0 +1,23 @@
+.btn {
+    width: 150px;
+    height: 70px;
+    background: #1B1D23;
+    border: none;
+
+    &_lg {
+        width: 220px;
+    }
+
+    & img {
+        margin-left: 20px;
+    }
+
+    &_link {
+        color: #fff;
+        font-weight: 700;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

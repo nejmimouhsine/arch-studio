@@ -1,0 +1,89 @@
+// --color-white: #fff;
+// --color-dark-blue: #1B1D23;
+// --color-dark-gray: #60636D;
+// --color-mid-gray: #7D828F;
+// --color-light-gray: #C8CCD8;
+// --color-very-light-gray: #EEEFF4;
+// --color-red: #DF5656;
+
+.landing {
+    height: 700px;
+    color: #fff;
+    overflow: hidden;
+
+    &_container { height: 100%; position: relative; }
+
+    &_hero {
+        height: 100%;
+        position: relative;
+        
+        &::after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba($color: #000, $alpha: .3);
+        }
+        
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 50px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & h2 {
+            font-size: 80px;
+            margin-bottom: 5px;
+            max-width: 70%;
+        }
+
+        & p {
+            max-width: 45%;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1.7;
+            height: 110px;
+        }
+    }
+
+    &_changer {
+        width: 270px;
+        height: 80px;
+        background: #fff;
+        position: absolute;
+        left: -70px;
+        bottom: 0;
+        display: flex;
+    }
+
+    &_num {
+        color: #60636D;
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover { background: #EEEFF4; }
+
+        &.active {
+            background-color: #1B1D23;
+            color: #fff;
+        }
+    }
+}

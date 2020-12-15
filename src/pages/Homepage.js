@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
+import Landing from '../components/landing/Landing';
 
 const Homepage = () => {
     return (
         <Fragment>
-            Homepage
+            <Landing />
         </Fragment>
     )
 }
