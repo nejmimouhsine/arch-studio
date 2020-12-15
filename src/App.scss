@@ -1,0 +1,33 @@
+// --color-white: #fff;
+// --color-dark-blue: #1B1D23;
+// --color-dark-gray: #60636D;
+// --color-mid-gray: #7D828F;
+// --color-light-gray: #C8CCD8;
+// --color-very-light-gray: #EEEFF4;
+// --color-red: #DF5656;
+
+.App {
+    &_pages {
+        position: absolute;
+        top: 0;
+        left: 50px;
+
+        & h4 {
+            color: #C8CCD8;
+            position: absolute;
+            left: -55px;
+            top: 200px;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            font-weight: 500;
+            transform: rotateZ(90deg);
+        }
+    }
+
+    &_vertical {
+        width: 1px;
+        height: 100px;
+        background: #C8CCD8;
+    }
+
+}
