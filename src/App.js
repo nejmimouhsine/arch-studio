@@ -18,11 +18,11 @@ const App = () => {
     return (
         <Router>
             <div className="App">
-                <Header />
                 <div className="App_pages">
                     <div className="App_vertical"></div>
                     <h4>Home</h4>
                 </div>
+                <Header />
                 <Switch>
                     <Route exact path="/" component={Homepage} />
                     <Route path="/portfolio" component={Portfolio} />
