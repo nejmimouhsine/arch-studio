@@ -24,3 +24,9 @@
     }
 
 }
+
+@media only screen and (max-width: 1000px) {
+    .App {
+        &_pages { display: none; }
+    }
+}

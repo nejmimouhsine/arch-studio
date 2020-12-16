@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Slider.scss';
 
-import ArrowIcon from '../../assets/icons/icon-arrow-w-s.svg';
 import Button from '../button/Button';
 import { SliderData } from '../landing/SliderData';
 
@@ -31,10 +30,7 @@ const Slider = () => {
                 <div className='slider_content'>
                     <h2>{slide.title}</h2>
                     <p>{slide.text}</p>
-                    <Button to='/portfolio' cName='btn btn_lg'>
-                        See Our Portfolio
-                        <img src={ArrowIcon} alt='Arch Studio' />
-                    </Button>
+                    <Button to='/portfolio' cName='btn btn_lg'>See Our Portfolio</Button>
                 </div>
             </div>
             <div className='slider_changer'>
