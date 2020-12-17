@@ -87,6 +87,11 @@
 
 @media only screen and (max-width: 500px) {
     .hero {
-        height: 1400px;
+        height: 800px;
+        &_content {
+            padding-left: 0;
+            & h2 { display: none; }
+            & h3 { font-size: 35px; }
+        }
     }
 } 

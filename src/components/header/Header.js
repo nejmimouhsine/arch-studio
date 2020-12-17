@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import ArchLogo from '../../assets/logo.svg';
 import MenuToggle from '../../assets/icons/icon-hamburger.svg';
@@ -18,9 +18,9 @@ const Header = () => {
                 </div>
                 <nav className={toggle ? 'header_navigation active' : 'header_navigation' }>
                     <ul className='header_list'>
-                        <li><Link to='/portfolio' className='header_link'>Portfolio</Link></li>
-                        <li><Link to='/about' className='header_link'>About Us</Link></li>
-                        <li><Link to='/contact' className='header_link'>Contact</Link></li>
+                        <li><NavLink to='/portfolio' activeClassName='selected' className='header_link'>Portfolio</NavLink></li>
+                        <li><NavLink to='/about' activeClassName='selected' className='header_link'>About Us</NavLink></li>
+                        <li><NavLink to='/contact' activeClassName='selected' className='header_link'>Contact</NavLink></li>
                     </ul>
                 </nav>
                 <div className='header_toggle' onClick={handleToggle}>
