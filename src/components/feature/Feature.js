@@ -12,7 +12,8 @@ const Feature = (props) => {
                         <source srcSet={`${props.imgTab} 1x`} media="(max-width: 1000px)" />
                         <img
                             srcSet={`${props.imgDesk} 2x`}
-                            alt="Arch Sudio Features" />
+                            alt="Arch Sudio Features"
+                            />
                     </picture>
                     <h2>{props.num}</h2>
                 </div>
