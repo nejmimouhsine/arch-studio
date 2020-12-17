@@ -36,4 +36,11 @@
             filter: invert(1);
         }
     }
+
+    &_empty {
+        width: 120px;
+        height: 80px;
+
+        & img { margin-left: 0; }
+    }
 }

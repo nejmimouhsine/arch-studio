@@ -1,0 +1,84 @@
+.connect {
+    height: 600px;
+    overflow: hidden;
+    
+    &_container {
+        display: flex;
+    }
+
+    &_title {
+        width: 35%;
+
+        & h2 {
+            color: #1B1D23;
+            font-size: 50px;
+            max-width: 60%;
+        }
+    }
+
+    &_inputs {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_input {
+        height: 50px;
+        width: 100%;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #1B1D23;
+        border: none;
+        border-bottom: 1px solid #1B1D23;
+        outline: none;
+        margin-bottom: 30px;
+
+        &::placeholder {
+            color: #C8CCD8;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
+    &_area {
+        height: 150px;
+        margin: 0;
+        resize: none;
+    }
+
+    &_btn {
+        position: relative;
+        & button {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .connect {
+        &_container { flex-direction: column; }
+        &_title {
+            width: 100%;
+            text-align: center;
+            
+            & h2 {
+                max-width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+        &_inputs {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .connect {
+        &_title {
+            & h2 { font-size: 35px; }
+        }
+    }
+}
