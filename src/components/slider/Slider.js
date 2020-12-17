@@ -21,7 +21,7 @@ const Slider = () => {
                 <div className='slider_hero'>
                     <picture>
                         <source srcSet={`${slide.imgMobile} 1x`} media="(max-width: 500px)" />
-                        <source srcSet={`${slide.imgTablet} 1x`} media="(min-width: 500px) and (max-width: 1000px)" />
+                        <source srcSet={`${slide.imgTablet} 1x`} media="(max-width: 1000px)" />
                         <img
                             srcSet={`${slide.imgDesktop} 2x`}
                             alt="Full Logo" />
