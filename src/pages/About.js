@@ -11,6 +11,10 @@ import AboutHeroMobile from '../assets/about/mobile/image-hero.jpg';
 const About = () => {
     return (
         <Fragment>
+            <div className='App_pages'>
+                <div className='App_vertical'></div>
+                <h4>About</h4>
+            </div>
             <Hero
                 imgDesk={AboutHero}
                 imgTab={AboutHeroTablet}

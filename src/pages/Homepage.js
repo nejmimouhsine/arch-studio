@@ -7,6 +7,10 @@ import Features from '../components/features/Features';
 const Homepage = () => {
     return (
         <Fragment>
+            <div className='App_pages'>
+                <div className='App_vertical'></div>
+                <h4>Home</h4>
+            </div>
             <Landing />
             <Welcome />
             <AboutUs />

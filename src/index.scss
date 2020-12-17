@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul { list-style: none; }
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.line {
+    width: 80px;
+    height: 1px;
+    background: #C8CCD8;
+}
+
+.App {
+    &_pages {
+        position: absolute;
+
+        & h4 {
+            position: absolute;
+            top: 80px;
+            left: -120px;
+            height: 100px;
+            width: 300px;
+            color: #C8CCD8;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            font-size: 15px;
+            font-weight: 500;
+            transform: rotateZ(90deg);
+        }
+    }
+
+    &_vertical {
+        width: 1px;
+        height: 100px;
+        background: #C8CCD8;
+        position: absolute;
+        top: -150px;
+        left: 75px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .App {
+        &_pages { display: none; }
+    }
+}

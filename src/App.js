@@ -1,5 +1,4 @@
-import React/*, { useState } */ from 'react';
-import './App.scss';
+import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -18,10 +17,6 @@ const App = () => {
     return (
         <Router>
             <div className="App">
-                <div className="App_pages">
-                    <div className="App_vertical"></div>
-                    <h4>Home</h4>
-                </div>
                 <Header />
                 <Switch>
                     <Route exact path="/" component={Homepage} />

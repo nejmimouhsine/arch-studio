@@ -20,7 +20,7 @@ const Header = () => {
                     <ul className='header_list'>
                         <li><NavLink to='/portfolio' activeClassName='selected' className='header_link'>Portfolio</NavLink></li>
                         <li><NavLink to='/about' activeClassName='selected' className='header_link'>About Us</NavLink></li>
-                        <li><NavLink to='/contact' activeClassName='selected' className='header_link'>Contact</NavLink></li>
+                        <li><NavLink to='/contact' activeClassName='selected' className='header_link' >Contact</NavLink></li>
                     </ul>
                 </nav>
                 <div className='header_toggle' onClick={handleToggle}>

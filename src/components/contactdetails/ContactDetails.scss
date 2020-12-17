@@ -1,5 +1,7 @@
 .details {
-    height: 400px;
+    height: 600px;
+    display: flex;
+    align-items: center;
 
     &_content {
         display: flex;
