@@ -1,46 +1,79 @@
-import React, { useState } from 'react';
-import './Slider.scss';
+import React, { useState, useEffect, useRef } from "react";
+import "./Slider.scss";
 
-import Button from '../button/Button';
-import { SliderData } from '../landing/SliderData';
+import Button from "../button/Button";
+import { SliderData } from "../landing/SliderData";
 
 const Slider = () => {
-    const [current, setCurrent] = useState(0);
-    const slide = SliderData[current];
+	const [current, setCurrent] = useState(0);
+	const slide = SliderData[current];
 
-    const nextSlide = (e) => {
-        const btnId = parseInt(e.target.id); 
-        setCurrent(btnId);
-    }
+	const length = SliderData.length;
+	const timeout = useRef(null);
 
-    if(!Array.isArray(SliderData) || SliderData.length <= 0) { return null }
+	useEffect(() => {
+		const nextSlide = (e) => {
+			setCurrent((current) => (current === length - 1 ? 0 : current + 1));
+		};
 
-    return (
-        <div className='slider'>
-            <div className='slider_container' key={slide.id}>
-                <div className='slider_hero'>
-                    <picture>
-                        <source srcSet={`${slide.imgMobile} 1x`} media="(max-width: 500px)" />
-                        <source srcSet={`${slide.imgTablet} 1x`} media="(max-width: 1000px)" />
-                        <img
-                            srcSet={`${slide.imgDesktop} 2x`}
-                            alt="Full Logo" />
-                    </picture>
-                </div>
-                <div className='slider_content'>
-                    <h2>{slide.title}</h2>
-                    <p>{slide.text}</p>
-                    <Button to='/portfolio' cName='btn btn_lg'>See Our Portfolio</Button>
-                </div>
-            </div>
-            <div className='slider_changer'>
-                <div className='slider_num' id='0' onClick={nextSlide}>01</div>
-                <div className='slider_num' id='1' onClick={nextSlide}>02</div>
-                <div className='slider_num' id='2' onClick={nextSlide}>03</div>
-                <div className='slider_num' id='3' onClick={nextSlide}>04</div>
-            </div>
-        </div>
-    )
-}
+		timeout.current = setTimeout(nextSlide, 3000);
 
-export default Slider
+		return () => {
+			if (timeout.current) {
+				clearTimeout(timeout.current);
+			}
+		};
+	}, [current, length]);
+
+	const nextSlide = (e) => {
+		const btnId = parseInt(e.target.id);
+		setCurrent(btnId);
+	};
+
+	if (!Array.isArray(SliderData) || SliderData.length <= 0) {
+		return null;
+	}
+
+	return (
+		<div className="slider">
+			<div className="slider_container" key={slide.id}>
+				<div className="slider_hero">
+					<picture>
+						<source
+							srcSet={`${slide.imgMobile} 1x`}
+							media="(max-width: 500px)"
+						/>
+						<source
+							srcSet={`${slide.imgTablet} 1x`}
+							media="(max-width: 1000px)"
+						/>
+						<img srcSet={`${slide.imgDesktop} 2x`} alt="Full Logo" />
+					</picture>
+				</div>
+				<div className="slider_content">
+					<h2>{slide.title}</h2>
+					<p>{slide.text}</p>
+					<Button to="/portfolio" cName="btn btn_lg">
+						See Our Portfolio
+					</Button>
+				</div>
+			</div>
+			<div className="slider_changer">
+				<div className="slider_num" id="0" onClick={nextSlide}>
+					01
+				</div>
+				<div className="slider_num" id="1" onClick={nextSlide}>
+					02
+				</div>
+				<div className="slider_num" id="2" onClick={nextSlide}>
+					03
+				</div>
+				<div className="slider_num" id="3" onClick={nextSlide}>
+					04
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default Slider;
